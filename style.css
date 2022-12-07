@@ -1,0 +1,300 @@
+body {
+    background-color:slategrey;
+    color: white;
+}
+  
+* {
+    margin: 20px;
+    padding: 0;
+    font-size: 400;
+}
+
+.wrapper {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 1rem ;
+    background-color: slategrey;
+}
+
+/* Navigation Bar */
+
+.navbar .menu {
+    background-color: rgb(105, 122, 139);
+    font-family: 'Raleway', sans-serif;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+        "nav-menu nav-menu";
+    margin-bottom: 2.5rem;
+
+}
+
+.logoText h1 {
+    font-weight:bold;
+    color: whitesmoke;
+    font-variant: small-caps;
+    letter-spacing: 5px;
+    padding-bottom: 10px;
+    border-bottom: 2px groove;
+}
+
+.navbar .menu ul.nav-menu {
+    display: none;
+    text-align: right;
+    grid-area: nav-menu;
+    animation: fadeIn 1s;
+
+}
+  
+.navbar .menu ul.nav-menu.toggle-menu {
+    display: block;
+
+}
+  
+.navbar .menu ul.nav-menu li {
+    list-style: none;
+    display: block;
+
+}
+  
+.navbar .menu ul.nav-menu li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: white;
+    font-weight: 200;
+
+}
+  
+.navbar .menu ul.nav-menu li a:hover {
+    color: black;
+}
+
+
+/* About Me */
+
+.aboutMe {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 2px solid;
+    background-color: slategrey;
+}
+
+
+#AM {
+    margin-left: 8%;
+    font-family:'Rubik', sans-serif;
+    font-size: 40px;
+    letter-spacing: 8px;
+    color: black;
+    background-color: slategrey;
+    font-variant: small-caps;
+}
+
+#T {
+    font-family:monospace;
+    font-size: 15px;
+    margin-top: 70px;
+
+}
+
+
+/* Wildlife Photography */
+
+.Header {
+    font-family: 'Rubik', sans-serif;
+    font-size: 30px;
+    background-color: slategrey;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    color: black;
+    letter-spacing: 10px;
+
+}
+
+.grid-container {
+    display: grid;
+    border-bottom: 2px solid;
+    grid-template-areas:
+              "item2 item3"
+              "item1 item4"
+
+}
+
+.grid-container .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+.item1 {
+    grid-area: item1;
+}
+.item2 {
+    grid-area: item2;
+}
+.item3 {
+    grid-area: item4;
+}
+.item4 {
+    grid-area: item3;
+}
+
+
+/* Trip-Edmonton */
+.grid-containerE {
+    display: grid;
+    border-bottom: 2px solid;
+    grid-gap: 1px;
+    grid-template-areas:
+              "item2 item3"
+              "item1 item1"
+
+}
+
+.grid-containerE .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+.grid-containerE .item1 {
+    grid-area: item1;
+}
+.grid-containerE .item2 {
+    grid-area: item2;
+}
+.grid-containerE .item3 {
+    grid-area: item3;
+}
+
+/* Landscape */
+.grid-containerL {
+    display: grid;
+    border-bottom: 2px solid;
+    grid-gap: 1px;
+    grid-template-areas:
+              "item1 item2"
+              "item3 item4"
+              "item5 item6"
+
+
+}
+
+.grid-containerL .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+.grid-containerL .item1 {
+    grid-area: item1;
+}
+.grid-containerL .item2 {
+    grid-area: item2;
+}
+.grid-containerL .item3 {
+    grid-area: item3;
+}
+.grid-containerL .item4 {
+    grid-area: item4;
+}
+.grid-containerL .item5 {
+    grid-area: item5;
+}
+.grid-containerL .item6 {
+    grid-area: item6;
+}
+
+
+/* Footer */
+
+.footer {
+  height: 3rem;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(157, 157, 157, 0.42);
+}
+
+.footer p {
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+}
+
+.footer span.author {
+  font-weight: 700;
+}
+
+
+/*----------------------------------------------*/
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+
+button {
+float:right;
+background-color:#FF7F7F;
+padding: 0.55em 0.9em;
+color: white;
+font-size:0.7em;
+border-radius:40px;
+cursor: pointer;
+border: 2px solid black
+}
+
+.dark {
+  background-color: white;
+  color: black;
+  border: 4px solid #FF7F7F;
+  
+}
+
+/*----------------------------------------------*/
+  .go-top {
+    position:fixed;
+    bottom: 0px;
+    left:0px;
+    padding:20px;
+    display:none;
+    cursor: pointer;
+  }
+  .go-top:after {
+    content: '▲';
+    color: #000;
+    position: absolute; 
+    bottom:10px;
+    right: 50px;
+    font-size: 32px;
+  }
+/*----------------------------------------------*/
+
+
+
+@media only screen and (min-width: 700px) {
+  .navbar .menu {
+    grid-template-areas:
+                "nav-menu";
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .navbar .menu ul.nav-menu {
+    display: block;
+    text-align: right;
+    padding: 0.5rem 0;
+
+  }
+
+  .navbar .menu ul.nav-menu li {
+    display: inline;
+
+  }
+}
